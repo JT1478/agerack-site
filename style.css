@@ -1,0 +1,48 @@
+/* AgeRack site: olive drab, bone and blaze orange, matching the app. */
+:root {
+  --canvas: #E9EBE3;
+  --surface: #F6F7F2;
+  --ink: #2C3124;
+  --bark: #6E5B43;
+  --line: #D8D2C2;
+  --blaze: #C2410C;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #1C2018;
+    --surface: #262B21;
+    --ink: #E9EBE3;
+    --bark: #B8A98F;
+    --line: #3A4030;
+    --blaze: #FF7A45;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-block: 40px 72px;
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+}
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.brand { font-weight: 800; font-size: 1.25rem; letter-spacing: .02em; color: var(--ink); text-decoration: none; }
+nav { display: flex; gap: 18px; }
+nav a { color: var(--bark); font-weight: 600; text-decoration: none; }
+nav a[aria-current="page"] { color: var(--ink); }
+h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 8px; text-wrap: balance; }
+h2 { font-size: 1.25rem; margin: 36px 0 8px; }
+p, li { max-width: 65ch; }
+.meta { color: var(--bark); margin-top: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px 20px; margin: 20px 0; }
+a { color: var(--blaze); }
+a:focus-visible { outline: 3px solid var(--blaze); outline-offset: 2px; }
+footer { margin-top: 56px; color: var(--bark); font-size: .9rem; }
