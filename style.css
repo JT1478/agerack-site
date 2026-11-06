@@ -46,3 +46,6 @@ p, li { max-width: 65ch; }
 a { color: var(--blaze); }
 a:focus-visible { outline: 3px solid var(--blaze); outline-offset: 2px; }
 footer { margin-top: 56px; color: var(--bark); font-size: .9rem; }
+
+.store { margin: 24px 0; }
+.store img { display: block; height: 53px; width: auto; }
